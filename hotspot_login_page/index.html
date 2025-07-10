@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Login Form</title>
+    <style>
+        body {
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            color: #000;
+        }
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-container a {
+            display: block;
+            margin-bottom: 1rem;
+            color: #000;
+            text-align: right;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 0.5rem;
+            background: red;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .login-container p {
+            text-align: center;
+            margin-top: 1rem;
+            color: #666;
+        }
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .social-login button {
+            padding-left: 130px;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        .social-login img {
+            height: 18px;
+            width: 18px;
+            display: inline-block;
+        }
+        .registration {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .registration a {
+            color: blue;
+        }
+
+        @media (max-width: 400px) and (min-width: 320px) {
+            .login-container {
+                padding: 1rem;
+            }
+            .social-login button {
+                padding-left: 60px;
+            }
+            
+
+        }
+        @media (max-width:320px) {
+
+            .social-login button {
+                padding-left: 10px;
+            }
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <form class="login-container">
+        <img src=".\HotSpotLogo.svg" alt="Logo" >
+        <h2>Login into your Account</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" required>
+        <a href="#">Forgot Password?</a>
+        <button type="submit">login</button>
+        <p>or</p>
+        <div class="social-login">
+        <button type="button" style="border-radius:10px;border-color: #000;background-color:#fff;color: #000; border-style: groove; border-width: 1px;">
+            <img class="sign-in-icon" src="icons8-google-48.png" alt="google logo" style="height: 18px;"/> Sign in with Google                                 
+        </button>
+        <button type="button" style="background-color: #000; color:#fff;">
+            <img  src="icons8-apple-logo-50.png" alt="apple logo" style="height: 18px;"/> Sign in with Apple                                
+        </button>
+        <button type="button" style="background-color: #000;color:#fff;">
+            <img src="https://qa.dev.hotspotparking.com/img/brands/ms-logo.png" alt="microsoft logo"> Sign in with Microsoft                               
+        </button>
+        </div>
+        <div class="registration">
+            <p style="display: inline;">New User? </p><a href="#" style="display: inline;">Click Here</a>
+            <br>
+            <p style="display: inline;">Want to park your customers and employees? </p><a href="#" style="display: inline;">Click Here</a>
+        </div>
+    </form>
+</body>
+</html>
