@@ -17,10 +17,10 @@
         .login-container {
             background: #fff;
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             width: 100%;
-            max-width: 450px;
+            max-width: 400px;
             color: #000;
         }
         .login-container h2 {
@@ -40,9 +40,13 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-        .login-container a {
-            display: block;
+        .remember_me {
+            display: flex;
+            align-items:center;
             margin-bottom: 1rem;
+        }
+        .remember_me a {
+            display: block;
             color: #000;
             text-align: right;
         }
@@ -61,16 +65,20 @@
             margin-top: 1rem;
             color: #666;
         }
+        .or{
+            display: flex;
+            align-items:center; 
+            margin: 1.5rem 0;
+        }
         .social-login {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
         .social-login button {
-            padding-left: 130px;
             display: flex;
             gap: 0.5rem;
-            justify-content: flex-start;
+            justify-content: center;
             flex-direction: row;
             flex-wrap: nowrap;
             align-items: center;
@@ -83,28 +91,12 @@
         .registration {
             text-align: center;
             margin-top: 2rem;
+            flex-direction: column;
         }
+        .new_user{
+            margin-bottom: 10px;}
         .registration a {
             color: blue;
-        }
-
-        @media (max-width: 400px) and (min-width: 320px) {
-            .login-container {
-                padding: 1rem;
-            }
-            .social-login button {
-                padding-left: 60px;
-            }
-            
-
-        }
-        @media (max-width:320px) {
-
-            .social-login button {
-                padding-left: 10px;
-            }
-            
-
         }
         
     </style>
@@ -113,28 +105,42 @@
     <form class="login-container">
         <img src=".\HotSpotLogo.svg" alt="Logo" >
         <h2>Login into your Account</h2>
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Username" required>
+        <label for="username">Email Address </label>
+        <input type="text" id="username" placeholder="Email Address" required>
         <label for="password">Password</label>
         <input type="password" id="password" placeholder="Password" required>
-        <a href="#">Forgot Password?</a>
+        <div class ="remember_me">
+            <input type="checkbox" style="margin-right: 0.5rem;">
+            <label style="margin: 0; font-weight: normal;">Remember me</label>
+            <div style="flex: 1;">
+            <a href="#">Forgot Password?</a>
+            </div>
+        </div>
         <button type="submit">login</button>
-        <p>or</p>
+        <div class ="or">
+            <hr style="flex: 1; border: none; border-top: 1px solid #ccc; margin: 0;">
+            <span style="margin: 0 10px; color: #666;">or</span>
+            <hr style="flex: 1; border: none; border-top: 1px solid #ccc; margin: 0;">
+        </div>
         <div class="social-login">
-        <button type="button" style="border-radius:10px;border-color: #000;background-color:#fff;color: #000; border-style: groove; border-width: 1px;">
+        <button type="button" style="border-radius:10px;border-color: #000;background-color:#fff;color: #000;border: none; box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6); border-width: 1px;">
             <img class="sign-in-icon" src="icons8-google-48.png" alt="google logo" style="height: 18px;"/> Sign in with Google                                 
         </button>
         <button type="button" style="background-color: #000; color:#fff;">
             <img  src="icons8-apple-logo-50.png" alt="apple logo" style="height: 18px;"/> Sign in with Apple                                
         </button>
-        <button type="button" style="background-color: #000;color:#fff;">
+        <button type="button" style="background-color: gray;color:#fff;">
             <img src="https://qa.dev.hotspotparking.com/img/brands/ms-logo.png" alt="microsoft logo"> Sign in with Microsoft                               
         </button>
         </div>
         <div class="registration">
+            <div class="new_user">
             <p style="display: inline;">New User? </p><a href="#" style="display: inline;">Click Here</a>
             <br>
+        </div>
+        <div class="park">
             <p style="display: inline;">Want to park your customers and employees? </p><a href="#" style="display: inline;">Click Here</a>
+        </div>
         </div>
     </form>
 </body>
