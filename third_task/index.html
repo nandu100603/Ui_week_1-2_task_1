@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Width Responsive Layout</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .top-bottom-bar {
+            background-color: #E6EEF9; 
+            padding: 20px;
+        }
+
+        .content-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .block {
+            padding: 30px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block.left { 
+            background-color: #E0CEF5;
+            order: 1;
+        }
+
+        .block.main { 
+            background-color: #FFFFFF; 
+            order: 2;
+        }
+
+        .block.right { 
+            background-color: #FFF2D1; 
+            order: 3;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .content-area {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .block.left {
+                flex-basis: 41% ;
+                order: 1;
+            }
+
+            .block.right { 
+                flex-basis: 41%;
+                order: 2; 
+            }
+
+            .block.main { 
+                flex-basis: 100%;
+                order: 3;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .content-area {
+                flex-direction: row;
+                padding: 30px;
+                gap: 30px;
+            }
+
+            .block {
+                min-height: 200px;
+                flex: 1;
+            }
+
+            .block.left {
+                order: 1;
+            }
+
+            .block.main {
+                order: 2;
+            }
+
+            .block.right { 
+                order: 3;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="top-bottom-bar top-bar">Top Bar</div>
+    
+    <div class="content-area">
+        <div class="block left">Left (Purple) Block</div>
+        <div class="block main">Main (White) Block</div>
+        <div class="block right">Right (Yellow) Block</div>
+    </div>
+    
+    <div class="top-bottom-bar bottom-bar">Bottom Bar</div>
+</body>
+</html>
