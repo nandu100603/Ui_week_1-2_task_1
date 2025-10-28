@@ -30,7 +30,6 @@
         }
 
         .block {
-            padding: 30px;
             min-height: 150px;
             display: flex;
             align-items: center;
@@ -52,19 +51,19 @@
             order: 3;
         }
 
-        @media (min-width: 768px) and (max-width: 1024px) {
+        @media (min-width: 360px) and (max-width: 768px) {
             .content-area {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
 
             .block.left {
-                flex-basis: calc(40% - 10px);
+                flex-basis: calc(50% - 10px);
                 order: 1;
             }
 
             .block.right { 
-                flex-basis: calc(40% - 10px);
+                flex-basis: calc(50% - 10px);
                 order: 2; 
             }
 
@@ -74,7 +73,7 @@
             }
         }
 
-        @media (min-width: 1025px) {
+        @media (min-width: 769px) {
             .content-area {
                 flex-direction: row;
                 padding: 30px;
